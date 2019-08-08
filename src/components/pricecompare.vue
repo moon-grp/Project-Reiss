@@ -55,6 +55,7 @@ export default {
                 this.LTC=Response.data.LTC.USD
                 this.XRP=Response.data.XRP.USD
                 this.BTG=Response.data.BTG.USD
+
                 
 
             }

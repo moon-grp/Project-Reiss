@@ -52,6 +52,8 @@ module.exports = function (ctx) {
         'QTh',
         'QTr',
         'QTd',
+         'QAvatar',
+         'QBadge'
         
       ],
 
