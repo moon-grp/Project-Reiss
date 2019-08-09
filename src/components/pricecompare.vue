@@ -2,31 +2,54 @@
     <div class="q-pa-md row items-start q-gutter-md">
        <q-card >
       <q-card-section>
-          <p>Price Compare</p>
-      <div class="q-pa-md" >
-          <q-list separator>
+          <q-list >
                 <q-item >
-        <q-item-section>Bitcoin</q-item-section>
-        <q-item-section side>$ {{BTC}}</q-item-section>
+        <q-item-section><q-btn color="primary" label="Buy" class="btn-fixed-width text-overline" /></q-item-section>
+        <q-item-section side><q-btn color="white" text-color="black" label="Sell" class="btn-fixed-width text-overline" /></q-item-section>
       </q-item>
              <q-item >
-        <q-item-section>Ethereum</q-item-section>
-        <q-item-section side>$ {{ETH}}</q-item-section>
-      </q-item>
+               <q-item-section> <q-btn-dropdown class="text-overline" color="primary" label="Order Type"> 
+      <q-list>
+        <q-item clickable v-close-popup @click="onItemClick">
+          <q-item-section>
+            <q-item-label>Limited Order</q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </q-btn-dropdown>
+    </q-item-section>
+           </q-item>
         <q-item  >
-        <q-item-section>Litecoin</q-item-section>
-        <q-item-section side>$ {{LTC}}</q-item-section>
+        <q-item-section>
+            <q-input class="text-overline" outlined v-model="text" label="Order Size" >
+        <template v-slot:append>
+          <q-icon name="attach_money" />
+        </template>
+      </q-input>
+        </q-item-section>
       </q-item>
        <q-item  >
-        <q-item-section>XRP</q-item-section>
-        <q-item-section side>$ {{XRP}}</q-item-section>
+        <q-item-section>
+              <q-input height=1em outlined v-model="text" label="Price" class="text-overline" >
+        <template v-slot:append>
+          <q-icon name="attach_money" />
+        </template>
+      </q-input>
+        </q-item-section>
       </q-item>
        <q-item  >
-        <q-item-section>Bitcoin Gold</q-item-section>
-        <q-item-section side>$ {{BTG}}</q-item-section>
+        <q-item-section>
+            <q-btn color="primary" label="Buy Order" class="text-overline" />
+        </q-item-section>
+      </q-item>
+      <q-item  >
+          <q-item-section text-color="primary">
+              <div class="text-center" text-color="white">
+              <span class="text-right text-overline" >Create</span><span class="text-primary text-overline"> Auto Sale?</span>
+              </div>
+          </q-item-section>
       </q-item>
           </q-list>
-      </div>
       </q-card-section>
     </q-card>
     </div>
@@ -72,5 +95,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+.btn-fixed-width
+  width 100px
 </style>

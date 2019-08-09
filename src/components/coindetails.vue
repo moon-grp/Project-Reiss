@@ -1,7 +1,8 @@
 <template>
       <div class="q-pa-md">
     <q-table
-      title="Coins Details"
+      class="text-h6"
+      title="Coin Details"
       :data="data2"
       :columns="columns"
       row-key="name"
