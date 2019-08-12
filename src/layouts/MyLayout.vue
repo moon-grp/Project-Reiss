@@ -13,7 +13,7 @@
       <div class="col-xs-auto col-sm-12 col-md-9">
         <div class="column ">
       <div class="col ">
-        <coindetails />
+        <coinchart />
       </div>
       <div class="col">
        <coindetails />
@@ -38,6 +38,7 @@
 <script>
 import pricecompare from '../components/pricecompare'
 import coindetails from '../components/coindetails'
+import coinchart from '../components/coinchart'
 
 
 export default {
@@ -45,7 +46,8 @@ export default {
 
   components: {
     pricecompare,
-    coindetails
+    coindetails,
+    coinchart
      },
   data () {
     return {

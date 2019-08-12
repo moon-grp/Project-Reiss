@@ -55,7 +55,8 @@ module.exports = function (ctx) {
          'QAvatar',
          'QBadge',
          'QBtnDropdown',
-         'QInput'
+         'QInput',
+         
         
       ],
 

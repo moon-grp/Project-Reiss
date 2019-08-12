@@ -106,7 +106,7 @@ data () {
           marketcap:''
         },
         {
-            name: 'litecoin',
+            name: 'Litecoin',
           price: '',
           imgurl: '',
           directvol:'',
